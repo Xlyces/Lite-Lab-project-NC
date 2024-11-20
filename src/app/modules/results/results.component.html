@@ -1,0 +1,76 @@
+<div>
+    <!-- Sticky Navbar -->
+    <div class="fixed z-[60] flex w-full items-center p-5 font-thin transition-all bg-gradient-to-b from-black to-transparent md:py-6 md:px-14">
+        <div class="z-40 flex cursor-pointer items-center" [routerLink]="['/']">
+            <div class="relative mr-5 h-10 w-10">
+                <img src="logos/logo_gradient.svg" alt="" class="absolute -top-0.5 left-0 mr-5 h-11 w-11" />
+                <img src="logos/logo_white.svg" alt="" class="absolute left-0 top-0 mr-5 h-10 w-10 transition-colors"/>
+            </div>
+            <p class="text-lg">
+                Sylhk
+                <span class="hidden text-xs md:inline-block"> For Businesses </span>
+            </p>
+        </div>
+        
+        <!-- Centered Text -->
+        <div class="flex-grow text-center">
+            <p class="text-s md:text-s text-white">
+                Navigating Chinese Cross-Border Data Transfer Laws
+            </p>
+        </div>
+        
+        <!-- Empty div for spacing -->
+        <div class="flex-none w-40"></div>
+    </div>
+
+    <div class="sticky left-0 top-0 -z-30 -mt-[100vh] h-screen w-full overflow-hidden md:absolute md:mt-0 md:h-full">
+        <div class="absolute left-0 top-0 -z-20 h-full w-full bg-cover bg-top bg-no-repeat md:bg-fixed"
+          [style.backgroundImage]="'url(backgrounds/landing_bg.png)'">
+        </div>
+    </div>
+    <div class="flex justify-center items-center h-screen pt-20">
+        <div class="w-[90%] h-[90%] rounded-2xl shadow-lg overflow-hidden animate-fade-up">
+            <div class="grid-container h-full">
+                <div class="grid-1 p-2" (click)="changeContent(1)">
+                    <app-panel classes="bg-light-black h-full w-full font-light sticky top-40 text-white" type="dark">
+                        <div class="flex flex-col justify-center items-center h-[70%]">
+                            <div class="text-3xl pt-10 text-center text-gradient-diagonal">{{ dynamicContent1 }}</div>
+                        </div>
+                        <div class="text-white flex justify-center items-center text-center pb-0">
+                            <div>Personal Information Protection Laws (PIPL)</div>
+                        </div>
+                    </app-panel>
+                </div>
+                <div class="grid-2 p-2" (click)="changeContent(2)">
+                    <app-panel classes="bg-light-black h-full w-full font-light sticky top-40 text-white" type="dark">
+                        <div class="flex flex-col justify-center items-center h-[70%]">
+                            <div class="text-6xl pt-10 text-center text-gradient-diagonal">{{ dynamicContent2 }}</div>
+                        </div>
+                        <div class="text-white flex justify-center items-center text-center pb-0 fontsize text-base">
+                            <div>Cybersecurity Law (CSL)</div>
+                        </div>
+                    </app-panel>
+                </div>
+                <div class="grid-3 p-2">
+                    <a [routerLink]="['/josef']" class="h-full w-full"> <!-- Add routerLink here -->
+                        <app-panel classes="bg-light-black h-full w-full font-light sticky top-40 text-white border-4 border-crimson" type="dark">
+                            <div class="flex flex-col justify-center items-center h-full">
+                                <div class="text-4xl text-center text-white">Back</div>
+                            </div>
+                        </app-panel>
+                    </a>
+                </div>
+                <div class="grid-4 p-2">
+                    <app-panel classes="bg-light-black h-full w-full font-light sticky top-40 text-white" type="dark">
+                        <div class="h-full overflow-y-auto p-10">  <!-- Added classes for scrolling -->
+                            <app-dynamic-content [selectedPIPL]="selectedPIPL" [selectedMLPS]="selectedMLPS"></app-dynamic-content>
+                        </div>
+                    </app-panel>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center h-32">
+
+    </div>
+</div>

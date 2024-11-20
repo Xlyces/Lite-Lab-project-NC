@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "primeng/resources/themes/aura-dark-purple/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+// Fonts
+// @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype-variations");
+}
+
+@font-face {
+  font-family: "InterItalic";
+  src: url("/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype-variations");
+}
+
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit/Outfit-VariableFont_wght.ttf") format("truetype-variations");
+}
+
+@layer tailwind-base, tailwind-utilities, reset, primeng;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+
+@layer reset {
+  :root {
+    --xs-bg-gradient: conic-gradient(from 35deg at 65% 50%,
+        #ce0000,
+        33deg,
+        #b30a2f,
+        191deg,
+        #4d176e,
+        325deg,
+        #18112c);
+    --md-bg-gradient: conic-gradient(from -35deg,
+        #ce0000,
+        33deg,
+        #b30a2f,
+        191deg,
+        #4d176e,
+        325deg,
+        #18112c);
+  }
+
+  body {
+    //font-family: 'Outfit';
+    @apply bg-black;
+  }
+
+  input,
+  select {
+    outline: none;
+  }
+
+  .conic-bg {
+    background: var(--xs-bg-gradient);
+  }
+
+  // .perspective {
+  //   perspective: 10px;
+  // }
+  //
+  // .parallax {
+  //   transform: translateZ(-10px) scale(2);
+  //   transform-style: preserve-3d;
+  // }
+
+  .landing-gradient {
+    background: rgb(206, 0, 0);
+    background: linear-gradient(335deg,
+        rgba(206, 0, 0, 1) 0%,
+        rgba(179, 10, 47, 1) 19%,
+        rgba(77, 23, 110, 1) 45%,
+        rgba(24, 18, 28, 1) 80%);
+  }
+
+  .text-gradient-from-purple {
+    @apply from-purple to-red w-fit bg-gradient-to-r bg-clip-text text-transparent;
+  }
+
+  .text-gradient-from-red {
+    @apply from-red to-light-purple w-fit bg-gradient-to-r bg-clip-text text-transparent;
+  }
+
+  .text-gradient-diagonal {
+    @apply from-red to-crimson w-fit bg-gradient-to-br bg-clip-text text-transparent;
+  }
+
+  .text-gradient-from-red-top {
+    @apply from-red to-light-purple w-fit bg-gradient-to-b bg-clip-text text-transparent;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: calc(100vw / 100);
+    }
+
+    .conic-bg {
+      background: var(--md-bg-gradient);
+    }
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 20%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+  }
+
+  .grid-items{
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .grid-1{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  .grid-2{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  .grid-3{
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+  .grid-4{
+    grid-row: 1 / 4;
+    grid-column: 2 / 7;
+  }
+
+  .select-menu::part(button){
+    color: crimson;
+  }
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 4 !important;
+}
+
+h3{
+  font-size: 1.5rem;
+}

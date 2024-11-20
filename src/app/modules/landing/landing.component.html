@@ -1,0 +1,59 @@
+<div class="fixed z-[60] flex w-full items-center p-5 font-thin transition-all bg-gradient-to-b from-black to-transparent md:py-6 md:px-14">
+  <div class="z-40 flex cursor-pointer items-center" [routerLink]="['/']">
+    <div class="relative mr-5 h-10 w-10">
+      <img src="logos/logo_gradient.svg" alt="" class="absolute -top-0.5 left-0 mr-5 h-11 w-11" />
+      <img src="logos/logo_white.svg" alt="" class="absolute left-0 top-0 mr-5 h-10 w-10 transition-colors"/>
+    </div>
+    <p class="text-lg">
+      Sylhk
+      <span class="hidden text-xs md:inline-block"> For Businesses </span>
+    </p>
+  </div>
+  
+  <!-- Centered Text -->
+  <div class="flex-grow text-center">
+    <p class="text-s md:text-s text-white">
+      Navigating Chinese Cross-Border Data Transfer Laws
+    </p>
+  </div>
+
+  <!-- Empty div for spacing -->
+  <div class="flex-none w-40"></div> <!-- Adjust width as necessary -->
+</div>
+
+<div class="from-dark-purple relative w-full grow to-[#880000] pt-20 md:bg-transparent md:p-40 md:pt-60">
+  <div class="sticky left-0 top-0 -z-30 -mt-[100vh] h-screen w-full overflow-hidden md:absolute md:mt-0 md:h-full">
+    <div class="absolute left-0 top-0 -z-20 h-full w-full bg-cover bg-top bg-no-repeat md:bg-fixed"
+      [style.backgroundImage]="'url(backgrounds/landing_bg.png)'"></div>
+  </div>
+  <!-- <div class="w-full h-full fixed"> -->
+  <!--    -->
+  <!-- </div> -->
+  <div
+  class="bg-light-black absolute left-1/2 top-20 flex w-[80%] -translate-x-1/2 items-center gap-1 rounded-full px-5 py-1 pl-2.5 text-xs text-white transition-opacity md:top-28 md:w-fit md:text-base"
+  [ngClass]="{ 'opacity-0': hideBar }">
+  <lucide-icon [img]="icons.x" class="cursor-pointer" [size]="18" (click)="hideBar = true"></lucide-icon>
+  This tool does not provide legal advice and only serves to provide basic information. We undertake no responsiblity and make no guarantees to the accuracy of the information provided.
+</div>
+  <div
+    class="pt-10 mb-40 mt-12 flex w-full flex-col items-center justify-between gap-10 px-14 md:mb-60 md:mt-0 md:flex-row md:gap-0 md:px-0">
+    <div class="grow text-center md:text-left">
+      <h1 class="mb-7 font-sans text-xl font-light text-white md:mb-7 md:text-6xl">
+        Comply with Chinese Cross-Border
+        <br class="hidden md:block" />
+        Data Transfer Laws today.
+      </h1>
+      <h2 class="mb-12 font-sans text-l font-thin text-white md:mb-8">
+        Use our tool to learn about China’s cross-border data transfer 
+        <br class="hidden md:block" />
+        laws which may be applicable to you.
+      </h2>
+      <button class="from-red to-crimson mx-auto block rounded-lg bg-gradient-to-br py-3 text-xl md:mx-0 hover:bg-crimson animate-fade-up">
+        <span class="w-full px-8 text-center font-sans text-white" [routerLink]="['/josef']">Test Now!</span>
+    </button>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+<div class="relative z-50 flex gap-32 bg-black px-12 pb-60 pt-10 font-light text-white md:px-64 md:pb-80 md:pt-28"></div>

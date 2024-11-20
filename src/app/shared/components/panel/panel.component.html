@@ -1,0 +1,8 @@
+<div class="overflow-hidden rounded-2xl" [class]="classes" [ngClass]="{
+    'bg-gray-light': type === 'light',
+    'bg-light-black': type === 'dark',
+    'bg-[#111]': type === 'black',
+    '': type === 'custom',
+  }">
+  <ng-content></ng-content>
+</div>
